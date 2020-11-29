@@ -1,7 +1,6 @@
 <?php
-include("./include/config.php");
-
- ?>
+//include("./include/config.php");
+?>
 <script language="javascript" type="text/javascript">
 function f2()
 {
@@ -27,8 +26,8 @@ window.print();
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <?php 
 
-$ret1=mysql_query("SELECT * FROM users where id='".$_GET['uid']."'");
-while($row=mysql_fetch_array($ret1))
+//$ret1=mysql_query("SELECT * FROM users where id='".$_GET['uid']."'");
+//while($row=mysql_fetch_array($ret1))
 {
 ?>
  <tr>

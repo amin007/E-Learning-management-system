@@ -1,33 +1,43 @@
 <?php
+
 session_start();
-error_reporting(0);
-include("include/config.php");
+//error_reporting(0);
+//include("include/config.php");
+//include("../tatarajah.php");
+/*
 if(isset($_POST['submit']))
 {
 	$username=$_POST['username'];
 	$password=$_POST['password'];
-$ret=mysql_query("SELECT * FROM admin WHERE username='$username' and password='$password'");
-$num=mysql_fetch_array($ret);
-if($num>0)
-{
-$extra="change-password.php";//
-$_SESSION['alogin']=$_POST['username'];
-$_SESSION['id']=$num['id'];
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+	$ret=mysql_query("SELECT * FROM admin WHERE username='$username' and password='$password'");
+	$num=mysql_fetch_array($ret);
+	if($num>0)
+	{
+		$extra="change-password.php";//
+		$_SESSION['alogin']=$_POST['username'];
+		$_SESSION['id']=$num['id'];
+		/*$host=$_SERVER['HTTP_HOST'];
+		$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+		header("location:http://$host$uri/$extra");
+		exit();//*
+	}
+	else
+	{
+		$_SESSION['errmsg']="Invalid username or password";
+		/*$extra="index.php";
+		$host = $_SERVER['HTTP_HOST'];
+		$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+		header("location:http://$host$uri/$extra");
+		exit();//*
+	}
 }
 else
 {
-$_SESSION['errmsg']="Invalid username or password";
-$extra="index.php";
-$host  = $_SERVER['HTTP_HOST'];
-$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+	echo 'hahaha';
 }
-}
+//*/
+if (isset($_SESSION['errmsg'])) $_SESSION['errmsg'] = $_SESSION['errmsg'];
+else $_SESSION['errmsg'] = null;
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +53,13 @@ exit();
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
 </head>
 <body>
+<pre>
+<?php
+$host = $_SERVER['HTTP_HOST'];
+$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
+echo '<kbd>' . $host . '|' . $uri . '</kbd>';
+?>
+</pre>
 
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">

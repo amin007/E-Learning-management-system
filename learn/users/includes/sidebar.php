@@ -4,12 +4,12 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.php"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                   <?php $query=mysql_query("select fullName from users where userEmail='".$_SESSION['login']."'");
+                   <?php /*$query=mysql_query("select fullName from users where userEmail='".$_SESSION['login']."'");
                  while($row=mysql_fetch_array($query)) 
-                {
+                {*/
                   ?> 
               	  <h5 class="centered"><?php echo htmlentities($row['fullName']);?></h5>
-                  <?php } ?>
+                  <?php //} ?>
               	  	
                   <li class="mt">
                       <a href="dashboard.php">

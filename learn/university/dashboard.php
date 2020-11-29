@@ -1,11 +1,12 @@
 <?php session_start();
 error_reporting(0);
+/*
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
   { 
 header('location:index.php');
 }
-else{ ?>
+else{ */?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,4 +94,4 @@ while($row=mysql_fetch_array($query))
 	<script src="assets/js/zabuto_calendar.js"></script>	
   </body>
 </html>
-<?php } ?>
+<?php // } ?>

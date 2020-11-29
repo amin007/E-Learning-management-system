@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+/*
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
   { 
@@ -29,6 +30,7 @@ else
 $errormsg="Profile not updated !!";
 }
 }
+*/
 ?>
 
 <!DOCTYPE html>
@@ -208,4 +210,4 @@ while ($rw=mysql_fetch_array($sql)) {
 
   </body>
 </html>
-<?php } ?>
+<?php //} ?>

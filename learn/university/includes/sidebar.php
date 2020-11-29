@@ -4,12 +4,12 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.php"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                   <?php $query=mysql_query("select uname from university where uemail='".$_SESSION['login']."'");
-                  while($row=mysql_fetch_array($query)) 
-                  {
+                   <?php //$query=mysql_query("select uname from university where uemail='".$_SESSION['login']."'");
+                  //while($row=mysql_fetch_array($query)) 
+                  //{
                    ?> 
                <h5 class="centered"><?php echo htmlentities($row['uname']);?></h5>
-                  <?php } ?>
+                  <?php// } ?>
               	  	<br/>   <br/>
                   <li class="sub-menu">
                       <a href="dashboard.php">

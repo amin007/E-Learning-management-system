@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+/*
 include("includes/config.php");
 if(isset($_POST['submit']))
 {
@@ -52,6 +53,7 @@ else
 $errormsg="Invalid email id or Contact no";
 }
 }
+*/
 ?>
 
 <!DOCTYPE html>

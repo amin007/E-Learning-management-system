@@ -1,11 +1,12 @@
 <?php session_start();
 error_reporting(0);
+/*
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
   { 
 header('location:index.php');
 }
-else{ ?>
+else{*/ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@ else{ ?>
 
   <body>
 
-  <section id="container" >
+<section id="container" >
 <?php include("includes/header.php");?>
 <?php include("includes/sidebar.php");?>
       <section id="main-content">
@@ -48,7 +49,7 @@ else{ ?>
                   
                   
                   	<div class="col-md-2 col-sm-2 box0">
-                        <div>
+                        <div>Test 123
                  
                   </div></div>
 
@@ -97,4 +98,4 @@ while($row=mysql_fetch_array($query))
 	<script src="assets/js/zabuto_calendar.js"></script>	
   </body>
 </html>
-<?php } ?>
+<?php //} ?>

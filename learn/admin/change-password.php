@@ -1,6 +1,6 @@
-
 <?php
 session_start();
+/*
 include('include/config.php');
 if(strlen($_SESSION['alogin'])==0)
 	{	
@@ -25,6 +25,7 @@ else
 $_SESSION['msg']="Old Password not match !!";
 }
 }
+*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -146,4 +147,4 @@ return true;
 	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="scripts/flot/jquery.flot.js" type="text/javascript"></script>
 </body>
-<?php } ?>
+<?php //} ?>
